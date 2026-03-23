@@ -30,6 +30,6 @@ bit=2
 seviye=2**bit
 faktor=256//seviye
 yuz_bit=(face//faktor)*faktor
-cv2.imshow("nicemleme", yuz_bit)
+cv2.imshow(f'{seviye}Seviye ({bit}-bit)', yuz_bit)
 cv2.waitKey()
 cv2.destroyAllWindows()
