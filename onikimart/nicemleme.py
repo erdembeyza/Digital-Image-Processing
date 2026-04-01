@@ -14,3 +14,4 @@ for bit in[8,4,2,1]:
     nicemli=(img_gray//faktor)*faktor
     cv.imshow(f"{seviye} Seviye ({bit}-bit", nicemli)
     cv.waitKey()
+    cv.destroyAllWindows()
