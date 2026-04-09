@@ -18,13 +18,12 @@ bilateral = cv2.bilateralFilter(img, 9, 75, 75)
 kernel = np.ones((7,7), np.float32) / 25
 ozel = cv2.filter2D(img, -1, kernel)
 
-cv2.imshow("orginal", img)
-cv2.imshow("kutu", kutu)
-cv2.imshow("gauss", gauss)
-cv2.imshow("medyan", medyan)
-cv2.imshow("bilateral", bilateral)
-cv2.imshow("ozel", ozel)
+cv2.imshow('orginal', img)
+cv2.imshow('kutu', kutu)
+cv2.imshow('gauss', gauss)
+cv2.imshow('medyan', medyan)
+cv2.imshow('bilateral', bilateral)
+cv2.imshow('ozel', ozel)
 cv2.waitKey(0)
-cv2.destroyAllWindows()
 
 #kendin de filtre kernel oluşturabilirsin
