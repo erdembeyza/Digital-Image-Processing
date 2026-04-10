@@ -12,6 +12,9 @@ for bit in[8,4,2,1]:
     seviye=2**bit
     faktor=256//seviye
     nicemli=(img_gray//faktor)*faktor
-    cv.imshow(f"{seviye} Seviye ({bit}-bit", nicemli)
+   
+    dosya_adi = f"{seviye} Seviye ({bit}-bit).png"
+    cv.imwrite(dosya_adi, nicemli)
+
     cv.waitKey()
     cv.destroyAllWindows()
