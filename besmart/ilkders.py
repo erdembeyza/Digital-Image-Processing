@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 #1. görüntü okuma
 # bilgisayardaki görselin yolunu py ortamına aktarır.
-img = cv.imread(r"/image/ornek1.jpg")
+img = cv.imread("image/ornek1.jpg")
 
 #2. görüntü griye dönüştü
 

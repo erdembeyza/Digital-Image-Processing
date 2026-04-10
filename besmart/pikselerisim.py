@@ -1,7 +1,5 @@
 import cv2
 import numpy as np
-
-
 path = r"C:\Users\beyza\Desktop\goruntu_isleme_dersi\image\opencv.png"
 img = cv2.imread(path)
 # Tek piksel erişimi (satır, sütun)
