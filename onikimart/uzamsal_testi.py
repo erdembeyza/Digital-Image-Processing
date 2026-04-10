@@ -10,6 +10,12 @@ print(f"gri boyut:{img_gray.shape}")
 
 for olcek in [1,0.5,0.25,0.125]:
     kucuk=cv.resize(img_gray,  None, fx=olcek, fy=olcek, interpolation=cv.INTER_NEAREST)
+
+    """
+     #çıktıları görsel olarak kaydetmek
+    dosya_adi = f"uzamsal_testi_{olcek}.png"
+    cv.imwrite(dosya_adi, kucuk)"""
+
     buyuk=cv.resize(kucuk, img_gray.shape[::1], interpolation=cv.INTER_NEAREST)
     cv.imshow(f"olcek: {olcek}", buyuk)
     cv.waitKey()
