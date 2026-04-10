@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 img = cv2.imread(r'c:\Users\beyza\Desktop\goruntu_isleme_dersi\onikimart\vesikalik.jpg', cv2.IMREAD_GRAYSCALE)
+
 # 1. Görüntüyü gri tonlamalı (Grayscale) olarak yükle
 
 # 2. ÖRNEKLEME: Görüntüyü küçülterek pikselleştir (Örn: 20x20 piksel)
