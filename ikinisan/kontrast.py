@@ -1,3 +1,5 @@
+import os
+
 import cv2 as cv 
 import numpy as np
 path= r"C:\Users\beyza\Desktop\goruntu_isleme_dersi\ikinisan\sisli.jpg"
@@ -12,6 +14,8 @@ stretched = (img - min_val) * katsayi
 
 # Sonucu tam sayı 8-bit renk formatına çevir
 stretched = np.uint8(stretched)
+
+cv.imwrite(os.path.join(os.path.dirname(path), "stretched.jpg"), stretched)
 
 cv.imshow("orginal", img)
 cv.imshow("stretched", stretched)
