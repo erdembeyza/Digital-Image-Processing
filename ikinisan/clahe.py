@@ -1,7 +1,8 @@
 import os
 """standart histogram: görüntünün tamamına (global) bakar ve karanlık fotoğrafları aydınlatmak veya 
 soluk fotoğrafların kontrastını artırmak için pikselleri 0-255 arasına yayar.
-clache: sh nin yapamadığı kısımları yapar: lokal kontrast artırma, gürültü koruma, aşırı aydınlatılmış bölgeleri tıraşlama gibi işlemleri yapar."""
+clache: sh nin yapamadığı kısımları yapar: lokal kontrast artırma, gürültü koruma, aşırı aydınlatılmış 
+bölgeleri tıraşlama gibi işlemleri yapar."""
 
 import cv2
 import numpy as np
