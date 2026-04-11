@@ -6,7 +6,8 @@ import os
 import cv2
 import numpy as np
 path= r"C:\Users\beyza\Desktop\goruntu_isleme_dersi\ikinisan\belge.jpg"
-img= cv2.imread(path, 0)
+img_orginal= cv2.imread(path)
+img= cv2.imread(path, 0) #siyah beyaz okumak için 0 ekledik! çünkü eşiklemede gri tonlamalı fotoğraflar kullanılır.
 binary = cv2.threshold(
     img, 127, 255, 
     cv2.THRESH_BINARY
@@ -20,7 +21,7 @@ otsu = cv2.threshold(
 cv2.imwrite(os.path.join(os.path.dirname(path), "binary.jpg"), binary[1])
 cv2.imwrite(os.path.join(os.path.dirname(path), "otsu.jpg"), otsu[1])
 
-cv2.imshow("orginal", img)
+cv2.imshow("orginal", img_orginal)
 cv2.imshow("binary", binary[1])
 cv2.imshow("otsu", otsu[1])
 cv2.waitKey(0)
