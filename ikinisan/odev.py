@@ -1,9 +1,12 @@
+import os
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
 #1)Görüntü matris boyutunu Numpy ile printleyin.
-img= cv2.imread("xray.jpg", 0)
+path = r"C:\Users\beyza\Desktop\goruntu_isleme_dersi\ikinisan\xray.jpg"
+img = cv2.imread(path, 0) 
 print(img.shape)
 #sonuc: 415, 720
 
@@ -24,6 +27,12 @@ axes[1].set_title('Logaritmik')
 axes[2].imshow(global_eq, cmap='gray')
 axes[2].set_title('GlobalEQ')
 plt.show()
+
+# Görüntüleri kaydet
+
+cv2.imwrite(os.path.join(os.path.dirname(path), "global_eq.jpg"), global_eq)
+cv2.imwrite(os.path.join(os.path.dirname(path), "logaritmik.jpg"), log_img)
+cv2.imwrite(os.path.join(os.path.dirname(path), "orijinal.jpg"), img)
 
 #4) Notebook Raporunuza Ekleyiniz: Çıktıdaki siyah arka plana ne oldu? Hangi yöntem daha fazla gürültü üretti, bunun teorik altyapısı nedir?
 """Arka plandaki karanlık kısımlar yumuşak şekilde aydınlandı. Tam siyahlar yine tam siyah (0) olarak
